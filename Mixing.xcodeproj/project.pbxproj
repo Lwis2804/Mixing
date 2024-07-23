@@ -21,7 +21,7 @@
 		AAB039052C4F10C5006128DE /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB039042C4F10C5006128DE /* Image+Extension.swift */; };
 		AAB039092C4F1117006128DE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB039082C4F1117006128DE /* String+Extension.swift */; };
 		AAB0390C2C4F117B006128DE /* UiView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0390B2C4F117B006128DE /* UiView+Extension.swift */; };
-		AAB0390F2C4F11CE006128DE /* UiTableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0390E2C4F11CE006128DE /* UiTableViewCell+Extension.swift */; };
+		AAB0390F2C4F11CE006128DE /* UiCollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0390E2C4F11CE006128DE /* UiCollectionViewCell+Extension.swift */; };
 		AAB039182C4F1288006128DE /* CocktailsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB039132C4F1288006128DE /* CocktailsListPresenter.swift */; };
 		AAB039192C4F1288006128DE /* CocktailsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB039142C4F1288006128DE /* CocktailsListRouter.swift */; };
 		AAB0391A2C4F1288006128DE /* CocktailsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB039152C4F1288006128DE /* CocktailsListViewController.swift */; };
@@ -31,6 +31,7 @@
 		AAB039272C4F17D1006128DE /* CocktailsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB039262C4F17D1006128DE /* CocktailsListViewController.xib */; };
 		AAB0392A2C4F4D89006128DE /* CocktailsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB039282C4F4D89006128DE /* CocktailsListCollectionViewCell.swift */; };
 		AAB0392B2C4F4D89006128DE /* CocktailsListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB039292C4F4D89006128DE /* CocktailsListCollectionViewCell.xib */; };
+		AAB0392D2C4F534C006128DE /* CocktailsListViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0392C2C4F534C006128DE /* CocktailsListViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +51,7 @@
 		AAB039042C4F10C5006128DE /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		AAB039082C4F1117006128DE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		AAB0390B2C4F117B006128DE /* UiView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+Extension.swift"; sourceTree = "<group>"; };
-		AAB0390E2C4F11CE006128DE /* UiTableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiTableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		AAB0390E2C4F11CE006128DE /* UiCollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiCollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		AAB039132C4F1288006128DE /* CocktailsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListPresenter.swift; sourceTree = "<group>"; };
 		AAB039142C4F1288006128DE /* CocktailsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListRouter.swift; sourceTree = "<group>"; };
 		AAB039152C4F1288006128DE /* CocktailsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		AAB039262C4F17D1006128DE /* CocktailsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailsListViewController.xib; sourceTree = "<group>"; };
 		AAB039282C4F4D89006128DE /* CocktailsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAB039292C4F4D89006128DE /* CocktailsListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailsListCollectionViewCell.xib; sourceTree = "<group>"; };
+		AAB0392C2C4F534C006128DE /* CocktailsListViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,7 @@
 		AAB038F82C4F0FFA006128DE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AAB0390D2C4F11A8006128DE /* UiTableViewCell */,
+				AAB0390D2C4F11A8006128DE /* UiCollectionViewCell */,
 				AAB0390A2C4F115E006128DE /* UiView */,
 				AAB039072C4F1108006128DE /* String */,
 				AAB039062C4F10E6006128DE /* Image */,
@@ -162,12 +164,12 @@
 			path = UiView;
 			sourceTree = "<group>";
 		};
-		AAB0390D2C4F11A8006128DE /* UiTableViewCell */ = {
+		AAB0390D2C4F11A8006128DE /* UiCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				AAB0390E2C4F11CE006128DE /* UiTableViewCell+Extension.swift */,
+				AAB0390E2C4F11CE006128DE /* UiCollectionViewCell+Extension.swift */,
 			);
-			path = UiTableViewCell;
+			path = UiCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		AAB039102C4F11F0006128DE /* Views */ = {
@@ -205,6 +207,7 @@
 			children = (
 				AAB039152C4F1288006128DE /* CocktailsListViewController.swift */,
 				AAB039262C4F17D1006128DE /* CocktailsListViewController.xib */,
+				AAB0392C2C4F534C006128DE /* CocktailsListViewControllerExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,7 +343,8 @@
 				AAB038FE2C4F1065006128DE /* ErrorWebService.swift in Sources */,
 				AAB0390C2C4F117B006128DE /* UiView+Extension.swift in Sources */,
 				AAB039252C4F12ED006128DE /* CocktailsListEntity.swift in Sources */,
-				AAB0390F2C4F11CE006128DE /* UiTableViewCell+Extension.swift in Sources */,
+				AAB0392D2C4F534C006128DE /* CocktailsListViewControllerExtension.swift in Sources */,
+				AAB0390F2C4F11CE006128DE /* UiCollectionViewCell+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
