@@ -9,6 +9,7 @@ import UIKit
 class CocktailsListViewController: UIViewController {
 
     var presenter: CocktailsList_ViewToPresenterProtocol?
+    var getCocktailsInfo : [Drinks] = []
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -18,4 +19,11 @@ class CocktailsListViewController: UIViewController {
 
 // MARK: - P R E S E N T E R · T O · V I E W
 extension CocktailsListViewController: CocktailsList_PresenterToViewProtocol {
+    func updateCocktailsList(withResponse response: CocktailsList) {
+        self.getCocktailsInfo = response.drinks ?? []
+        DispatchQueue.main.async {
+            <#code#>
+        }
+    }
+    
 }

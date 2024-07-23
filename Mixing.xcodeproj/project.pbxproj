@@ -29,6 +29,8 @@
 		AAB0391C2C4F1288006128DE /* CocktailsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB039172C4F1288006128DE /* CocktailsListInteractor.swift */; };
 		AAB039252C4F12ED006128DE /* CocktailsListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB039242C4F12ED006128DE /* CocktailsListEntity.swift */; };
 		AAB039272C4F17D1006128DE /* CocktailsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB039262C4F17D1006128DE /* CocktailsListViewController.xib */; };
+		AAB0392A2C4F4D89006128DE /* CocktailsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB039282C4F4D89006128DE /* CocktailsListCollectionViewCell.swift */; };
+		AAB0392B2C4F4D89006128DE /* CocktailsListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB039292C4F4D89006128DE /* CocktailsListCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		AAB039172C4F1288006128DE /* CocktailsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListInteractor.swift; sourceTree = "<group>"; };
 		AAB039242C4F12ED006128DE /* CocktailsListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListEntity.swift; sourceTree = "<group>"; };
 		AAB039262C4F17D1006128DE /* CocktailsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailsListViewController.xib; sourceTree = "<group>"; };
+		AAB039282C4F4D89006128DE /* CocktailsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		AAB039292C4F4D89006128DE /* CocktailsListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailsListCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 		AAB039102C4F11F0006128DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AAB039282C4F4D89006128DE /* CocktailsListCollectionViewCell.swift */,
+				AAB039292C4F4D89006128DE /* CocktailsListCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 				AAB038EE2C4F0F7B006128DE /* LaunchScreen.storyboard in Resources */,
 				AAB038EB2C4F0F7B006128DE /* Assets.xcassets in Resources */,
 				AAB038E92C4F0F74006128DE /* Main.storyboard in Resources */,
+				AAB0392B2C4F4D89006128DE /* CocktailsListCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +327,7 @@
 				AAB038E62C4F0F74006128DE /* ViewController.swift in Sources */,
 				AAB039052C4F10C5006128DE /* Image+Extension.swift in Sources */,
 				AAB038FC2C4F1052006128DE /* CocktailsWebService.swift in Sources */,
+				AAB0392A2C4F4D89006128DE /* CocktailsListCollectionViewCell.swift in Sources */,
 				AAB0391B2C4F1288006128DE /* CocktailsListProtocols.swift in Sources */,
 				AAB0391A2C4F1288006128DE /* CocktailsListViewController.swift in Sources */,
 				AAB0391C2C4F1288006128DE /* CocktailsListInteractor.swift in Sources */,

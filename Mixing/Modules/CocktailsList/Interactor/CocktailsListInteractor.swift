@@ -7,7 +7,22 @@
 import Foundation
 
 class CocktailsListInteractor: CocktailsList_PresenterToInteractorProtocol {
+    
     weak var presenter: CocktailsList_InteractorToPresenterProtocol?
-
+    var metodo : String = "https"
+    var host : String = "www.thecocktaildb.com"
+    
+    func getCocktailsListToInteractor() {
+        let service : NetworkApiProtocol = CocktailsWebService(urlConfiguration: CocktailsUrlCnfiguration(metodo: metodo, host: host, path: cocktailsPath.getCocktailList.getPath() as! PathsProtocol))
+        service.consumeWebService{ [weak self] (result : Result<CocktailsList, ErrorWebService>) in
+            switch result {
+            case .success(let success):
+                print(result)
+                self?.presenter?.getCocktailsListFromInteractor(withResponse: success)
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
+        }
+    }
 }
 

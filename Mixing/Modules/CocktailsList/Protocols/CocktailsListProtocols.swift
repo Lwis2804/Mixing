@@ -26,6 +26,8 @@ protocol CocktailsList_ViewToPresenterProtocol: AnyObject {
 	var view: CocktailsList_PresenterToViewProtocol? { get set }
 	var interactor: CocktailsList_PresenterToInteractorProtocol? { get set }
 	var router: CocktailsList_PresenterToRouterProtocol? { get set }
+    
+    func goToCocktailsList()
 }
 
 //MARK: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -49,6 +51,8 @@ protocol CocktailsList_ViewToPresenterProtocol: AnyObject {
 // MARK: PRESENTER -> INTERACTOR
 protocol CocktailsList_PresenterToInteractorProtocol: AnyObject {
     var presenter: CocktailsList_InteractorToPresenterProtocol? { get set }
+    
+    func getCocktailsListToInteractor()
 }
 
 //MARK: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -71,6 +75,8 @@ protocol CocktailsList_PresenterToInteractorProtocol: AnyObject {
 
 // MARK: INTERACTOR -> PRESENTER
 protocol CocktailsList_InteractorToPresenterProtocol: AnyObject {
+    
+    func getCocktailsListFromInteractor(withResponse response : CocktailsList)
 }
 
 //MARK: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -88,6 +94,8 @@ protocol CocktailsList_InteractorToPresenterProtocol: AnyObject {
 // MARK: PRESENTER -> VIEW
 protocol CocktailsList_PresenterToViewProtocol: AnyObject {
     var presenter: CocktailsList_ViewToPresenterProtocol? { get set }
+    
+    func updateCocktailsList(withResponse response : CocktailsList)
 }
 
 //MARK: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -107,5 +115,5 @@ protocol CocktailsList_PresenterToRouterProtocol: AnyObject {
 
 
 protocol PathsProtocol {
-    var pathToUse : String { get } // NO ME QUEDA MUY CLARO EL USO DE ESTA VARIABLE, ES SOLO DE LECTURA PERO COMO LA ESTOY USANDO
+    var pathToUse : String { get }
 }
