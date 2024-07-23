@@ -206,8 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				AAB039152C4F1288006128DE /* CocktailsListViewController.swift */,
-				AAB039262C4F17D1006128DE /* CocktailsListViewController.xib */,
 				AAB0392C2C4F534C006128DE /* CocktailsListViewControllerExtension.swift */,
+				AAB039262C4F17D1006128DE /* CocktailsListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";

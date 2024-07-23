@@ -9,12 +9,13 @@ import UIKit
 
 extension CocktailsListViewController : UICollectionViewDelegate & UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return getCocktailsInfo.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cCell = collectionView.dequeueReusableCell(withReuseIdentifier: CocktailsListCollectionViewCell.identifier, for: indexPath) as? CocktailsListCollectionViewCell else { return CocktailsListCollectionViewCell() }
+        cCell.configCocktailCell(withEntry: getCocktailsInfo[indexPath.row])
+        return cCell
     }
-    
-    
+
 }

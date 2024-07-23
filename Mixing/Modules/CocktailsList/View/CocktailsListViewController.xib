@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CocktailsListViewController" customModule="Mixing" customModuleProvider="target">
             <connections>
+                <outlet property="cocktailsCollectionView" destination="cqV-zE-Mc7" id="Akl-zH-fl9"/>
                 <outlet property="view" destination="F27-SL-v6u" id="XaU-S3-vTK"/>
             </connections>
         </placeholder>
@@ -18,8 +19,26 @@
         <view contentMode="scaleToFill" id="F27-SL-v6u">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cqV-zE-Mc7">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hna-B7-s1f">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="pdi-zc-ls6"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="pdi-zc-ls6" firstAttribute="bottom" secondItem="cqV-zE-Mc7" secondAttribute="bottom" id="G2W-Ou-Yrz"/>
+                <constraint firstItem="cqV-zE-Mc7" firstAttribute="top" secondItem="pdi-zc-ls6" secondAttribute="top" id="Obb-oI-pxp"/>
+                <constraint firstItem="cqV-zE-Mc7" firstAttribute="leading" secondItem="pdi-zc-ls6" secondAttribute="leading" id="VrQ-M1-EJg"/>
+                <constraint firstItem="pdi-zc-ls6" firstAttribute="trailing" secondItem="cqV-zE-Mc7" secondAttribute="trailing" id="pMx-aj-Maq"/>
+            </constraints>
             <point key="canvasLocation" x="51" y="25"/>
         </view>
     </objects>
