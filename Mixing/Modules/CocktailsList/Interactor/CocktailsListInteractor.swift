@@ -13,7 +13,7 @@ class CocktailsListInteractor: CocktailsList_PresenterToInteractorProtocol {
     var host : String = "www.thecocktaildb.com"
     
     func getCocktailsListToInteractor() {
-        let service : NetworkApiProtocol = CocktailsWebService(urlConfiguration: CocktailsUrlCnfiguration(metodo: metodo, host: host, path: cocktailsPath.getCocktailList.getPath() as! PathsProtocol))
+        let service : NetworkApiProtocol = CocktailsWebService(urlConfiguration: CocktailsUrlCnfiguration(metodo: metodo, host: host, path: cocktailsPath.getCocktailList.getPath()))
         service.consumeWebService{ [weak self] (result : Result<CocktailsList, ErrorWebService>) in
             switch result {
             case .success(let success):

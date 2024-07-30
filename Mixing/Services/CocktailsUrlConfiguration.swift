@@ -19,7 +19,6 @@ struct CocktailsUrlCnfiguration {
         self.path = path
     }
     
-    
     func cofingUrl() -> URL? {
         guard !host.isEmpty else { return nil }
         var componentes : URLComponents = URLComponents()
