@@ -17,5 +17,23 @@ extension CocktailsListViewController : UICollectionViewDelegate & UICollectionV
         cCell.configCocktailCell(withEntry: getCocktailsInfo[indexPath.row])
         return cCell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let info = getCocktailsInfo[indexPath.row]
+        self.presenter?.didSeletc(withResponse: info)
+    }
+
+}
+
+extension CocktailsListViewController : UICollectionViewDelegateFlowLayout {
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: CGFloat(191.0), height: CGFloat(290.0))
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
 
 }

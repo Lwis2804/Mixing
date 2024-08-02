@@ -22,9 +22,11 @@ class CocktailsListCollectionViewCell: UICollectionViewCell {
         guard let entrada = entry else { return }
         self.cocktailName.text = "\(entrada.strDrink ?? "")"
         if let urlThumb = entrada.strDrinkThumb,
-           let url = URL(string:"https://www.thecocktaildb.com/images/media/drink/\(urlThumb)"){
+           let url = URL(string:"\(urlThumb)"){
             downloadTask = self.cocktailImage.loadImage(url: url)
         }
     }
-
 }
+
+
+

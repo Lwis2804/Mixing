@@ -1,6 +1,6 @@
-//  CocktailsListProtocols.swift
+//  DetailViewProtocols.swift
 //  Mixing
-//  Created by LUIS GONZALEZ on 22/07/24.
+//  Created by LUIS GONZALEZ on 01/08/24.
 //  
 //  ViperTemplate v.0.0.1 - (2023, NS-Bionick Development Team)
 
@@ -22,13 +22,11 @@ import Foundation
  */
 
 // MARK: VIEW -> PRESENTER
-protocol CocktailsList_ViewToPresenterProtocol: AnyObject {
-	var view: CocktailsList_PresenterToViewProtocol? { get set }
-	var interactor: CocktailsList_PresenterToInteractorProtocol? { get set }
-	var router: CocktailsList_PresenterToRouterProtocol? { get set }
+protocol DetailView_ViewToPresenterProtocol: AnyObject {
+	var view: DetailView_PresenterToViewProtocol? { get set }
+	var interactor: DetailView_PresenterToInteractorProtocol? { get set }
+	var router: DetailView_PresenterToRouterProtocol? { get set }
     
-    func goToCocktailsList()
-    func didSeletc(withResponse response : Drinks)
 }
 
 //MARK: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -50,10 +48,10 @@ protocol CocktailsList_ViewToPresenterProtocol: AnyObject {
  */
 
 // MARK: PRESENTER -> INTERACTOR
-protocol CocktailsList_PresenterToInteractorProtocol: AnyObject {
-    var presenter: CocktailsList_InteractorToPresenterProtocol? { get set }
+protocol DetailView_PresenterToInteractorProtocol: AnyObject {
+    var presenter: DetailView_InteractorToPresenterProtocol? { get set }
     
-    func getCocktailsListToInteractor()
+  
 }
 
 //MARK: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -75,9 +73,9 @@ protocol CocktailsList_PresenterToInteractorProtocol: AnyObject {
  */
 
 // MARK: INTERACTOR -> PRESENTER
-protocol CocktailsList_InteractorToPresenterProtocol: AnyObject {
+protocol DetailView_InteractorToPresenterProtocol: AnyObject {
     
-    func getCocktailsListFromInteractor(withResponse response : CocktailsList)
+    func getToCocktailsListFromInteractor(withResponse response : Drinks)
 }
 
 //MARK: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -93,10 +91,10 @@ protocol CocktailsList_InteractorToPresenterProtocol: AnyObject {
  */
 
 // MARK: PRESENTER -> VIEW
-protocol CocktailsList_PresenterToViewProtocol: AnyObject {
-    var presenter: CocktailsList_ViewToPresenterProtocol? { get set }
+protocol DetailView_PresenterToViewProtocol: AnyObject {
+    var presenter: DetailView_ViewToPresenterProtocol? { get set }
     
-    func updateCocktailsList(withResponse response : CocktailsList)
+    func updateCocktailsListFromInteractor (withResponse reponse : Drinks)
 }
 
 //MARK: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -111,12 +109,5 @@ protocol CocktailsList_PresenterToViewProtocol: AnyObject {
  */
 
 // MARK: PRESENTER -> ROUTER
-protocol CocktailsList_PresenterToRouterProtocol: AnyObject {
-    
-    func goToDetailView(withInfo info : Drinks, andView view : CocktailsList_PresenterToViewProtocol)
-}
-
-
-protocol PathsProtocol {
-    var pathToUse : String { get }
+protocol DetailView_PresenterToRouterProtocol: AnyObject {
 }

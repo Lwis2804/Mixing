@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA63E3DF2C5C46DA0029E831 /* DetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63E3DA2C5C46DA0029E831 /* DetailViewPresenter.swift */; };
+		AA63E3E02C5C46DA0029E831 /* DetailViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63E3DB2C5C46DA0029E831 /* DetailViewRouter.swift */; };
+		AA63E3E12C5C46DA0029E831 /* DetailViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63E3DC2C5C46DA0029E831 /* DetailViewViewController.swift */; };
+		AA63E3E22C5C46DA0029E831 /* DetailViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63E3DD2C5C46DA0029E831 /* DetailViewProtocols.swift */; };
+		AA63E3E32C5C46DA0029E831 /* DetailViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63E3DE2C5C46DA0029E831 /* DetailViewInteractor.swift */; };
+		AA63E3EB2C5C4E900029E831 /* DetailViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA63E3EA2C5C4E900029E831 /* DetailViewViewController.xib */; };
 		AAB038E22C4F0F74006128DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB038E12C4F0F74006128DE /* AppDelegate.swift */; };
 		AAB038E42C4F0F74006128DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB038E32C4F0F74006128DE /* SceneDelegate.swift */; };
 		AAB038E62C4F0F74006128DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB038E52C4F0F74006128DE /* ViewController.swift */; };
@@ -35,6 +41,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA63E3DA2C5C46DA0029E831 /* DetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPresenter.swift; sourceTree = "<group>"; };
+		AA63E3DB2C5C46DA0029E831 /* DetailViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewRouter.swift; sourceTree = "<group>"; };
+		AA63E3DC2C5C46DA0029E831 /* DetailViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewViewController.swift; sourceTree = "<group>"; };
+		AA63E3DD2C5C46DA0029E831 /* DetailViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewProtocols.swift; sourceTree = "<group>"; };
+		AA63E3DE2C5C46DA0029E831 /* DetailViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewInteractor.swift; sourceTree = "<group>"; };
+		AA63E3EA2C5C4E900029E831 /* DetailViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewViewController.xib; sourceTree = "<group>"; };
 		AAB038DE2C4F0F74006128DE /* Mixing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB038E12C4F0F74006128DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAB038E32C4F0F74006128DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +87,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA63E3D82C5C30B00029E831 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				AA63E3E92C5C471D0029E831 /* Entity */,
+				AA63E3E82C5C47170029E831 /* Router */,
+				AA63E3E62C5C46F30029E831 /* Protocols */,
+				AA63E3E72C5C47040029E831 /* Presenter */,
+				AA63E3E52C5C46E90029E831 /* Interactor */,
+				AA63E3E42C5C46DF0029E831 /* View */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		AA63E3E42C5C46DF0029E831 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA63E3DC2C5C46DA0029E831 /* DetailViewViewController.swift */,
+				AA63E3EA2C5C4E900029E831 /* DetailViewViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA63E3E52C5C46E90029E831 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AA63E3DE2C5C46DA0029E831 /* DetailViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AA63E3E62C5C46F30029E831 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AA63E3DD2C5C46DA0029E831 /* DetailViewProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AA63E3E72C5C47040029E831 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AA63E3DA2C5C46DA0029E831 /* DetailViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AA63E3E82C5C47170029E831 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AA63E3DB2C5C46DA0029E831 /* DetailViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		AA63E3E92C5C471D0029E831 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		AAB038D52C4F0F74006128DE = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +257,7 @@
 		AAB039112C4F11FF006128DE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AA63E3D82C5C30B00029E831 /* DetailView */,
 				AAB039122C4F1268006128DE /* CocktailsList */,
 			);
 			path = Modules;
@@ -311,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAB039272C4F17D1006128DE /* CocktailsListViewController.xib in Resources */,
+				AA63E3EB2C5C4E900029E831 /* DetailViewViewController.xib in Resources */,
 				AAB038EE2C4F0F7B006128DE /* LaunchScreen.storyboard in Resources */,
 				AAB038EB2C4F0F7B006128DE /* Assets.xcassets in Resources */,
 				AAB038E92C4F0F74006128DE /* Main.storyboard in Resources */,
@@ -327,9 +402,13 @@
 			files = (
 				AAB039032C4F10A1006128DE /* CocktailsUrlConfiguration.swift in Sources */,
 				AAB039182C4F1288006128DE /* CocktailsListPresenter.swift in Sources */,
+				AA63E3E12C5C46DA0029E831 /* DetailViewViewController.swift in Sources */,
 				AAB038E62C4F0F74006128DE /* ViewController.swift in Sources */,
 				AAB039052C4F10C5006128DE /* Image+Extension.swift in Sources */,
+				AA63E3E02C5C46DA0029E831 /* DetailViewRouter.swift in Sources */,
 				AAB038FC2C4F1052006128DE /* CocktailsWebService.swift in Sources */,
+				AA63E3E22C5C46DA0029E831 /* DetailViewProtocols.swift in Sources */,
+				AA63E3E32C5C46DA0029E831 /* DetailViewInteractor.swift in Sources */,
 				AAB0392A2C4F4D89006128DE /* CocktailsListCollectionViewCell.swift in Sources */,
 				AAB0391B2C4F1288006128DE /* CocktailsListProtocols.swift in Sources */,
 				AAB0391A2C4F1288006128DE /* CocktailsListViewController.swift in Sources */,
@@ -338,6 +417,7 @@
 				AAB039192C4F1288006128DE /* CocktailsListRouter.swift in Sources */,
 				AAB038E42C4F0F74006128DE /* SceneDelegate.swift in Sources */,
 				AAB039002C4F1076006128DE /* CocktailsPath.swift in Sources */,
+				AA63E3DF2C5C46DA0029E831 /* DetailViewPresenter.swift in Sources */,
 				AAB038F72C4F0FF1006128DE /* TapBarController.swift in Sources */,
 				AAB039092C4F1117006128DE /* String+Extension.swift in Sources */,
 				AAB038FE2C4F1065006128DE /* ErrorWebService.swift in Sources */,

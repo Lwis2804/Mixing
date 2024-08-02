@@ -26,5 +26,12 @@ class CocktailsListRouter {
 }
 
 extension CocktailsListRouter: CocktailsList_PresenterToRouterProtocol {
+    func goToDetailView(withInfo info: Drinks, andView view: CocktailsList_PresenterToViewProtocol) {
+        if let view = view as? CocktailsListViewController {
+            let vc = DetailViewRouter.createModule(andInfo: info)
+            view.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     
 }

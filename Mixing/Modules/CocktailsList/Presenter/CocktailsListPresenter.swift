@@ -7,6 +7,7 @@
 import Foundation
 
 class CocktailsListPresenter: CocktailsList_ViewToPresenterProtocol {
+    
 
     weak var view: CocktailsList_PresenterToViewProtocol?
     var interactor: CocktailsList_PresenterToInteractorProtocol?
@@ -14,6 +15,12 @@ class CocktailsListPresenter: CocktailsList_ViewToPresenterProtocol {
     
     func goToCocktailsList() {
         interactor?.getCocktailsListToInteractor()
+    }
+    
+    func didSeletc(withResponse response: Drinks) {
+        if let view = view {
+            router?.goToDetailView(withInfo: response, andView: view)
+        }
     }
     
 }
